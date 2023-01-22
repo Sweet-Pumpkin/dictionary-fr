@@ -5,7 +5,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 // export
 module.exports = {
   // 파일을 읽어들이기 시작하는 진입점 설정
-  entry: './js/main.js',
+  entry: './ts/main.ts',
   
   // 결과물(번들)을 반환하는 설정
   output: {
@@ -25,10 +25,15 @@ module.exports = {
         ]
       },
       {
-        test: /\.js$/,
-        use: 'babel-loader'
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
       }
     ]
+  },
+
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
   },
 
   plugins: [

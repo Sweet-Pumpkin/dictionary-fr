@@ -1,3 +1,13 @@
-body {
-    background-color: red;
+/* Reset */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li, ol {
+    list-style: none;
 }
