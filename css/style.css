@@ -2,6 +2,11 @@
 * {
     margin: 0px;
     padding: 0px;
+    
+}
+
+body {
+    background-color: #EDEDED;
 }
 
 a {
@@ -14,9 +19,10 @@ li, ol {
 }
 
 /* HEADER */
-.header-wrap {
+.contents {
+    position: relative;
     width: 100%;
-    height: 454px;
+    height: 350px;
     background-color: #4AA8D8;
     display: flex;
     justify-content: center;
@@ -27,4 +33,19 @@ li, ol {
     letter-spacing: -15px;
     font-size: 90px;
     padding-top: 20px;
+}
+
+.content-wrap {
+    position: absolute;
+    top: 180px;
+}
+
+.type {
+
+}
+
+.content {
+    width: 800px;
+    height: 500px;
+    background-color: #fff;
 }

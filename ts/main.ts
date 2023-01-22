@@ -11,10 +11,14 @@ const root: HTMLElement | null = document.getElementById('root');
 
 function HeaderFnc(): void {
   let template = `
-    <div class="header-wrap">
+    <div class="contents">
       <h1 class="title">
         <a href="#">ㄷㅇㅈ</a>
       </h1>
+      <div class="content-wrap">
+        <div class="type"></div>
+        <div class="content"></div>
+      <div>
     </div>
   `
 
