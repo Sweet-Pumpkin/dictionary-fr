@@ -29,7 +29,8 @@ li, ol {
 }
 
 .title {
-    font-family: "Gothic A1";
+    height: 100px;
+    font-family: 'Gothic A1';
     letter-spacing: -15px;
     font-size: 90px;
     padding-top: 20px;
@@ -37,15 +38,19 @@ li, ol {
 
 .content-wrap {
     position: absolute;
-    top: 180px;
+    top: 130px;
 }
 
 .type {
-
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+    font-family: 'Explora', cursive;
+    font-weight: 900;
 }
 
 .content {
-    width: 800px;
+    width: 700px;
     height: 500px;
     background-color: #fff;
 }
