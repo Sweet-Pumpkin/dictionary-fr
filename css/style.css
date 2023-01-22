@@ -6,8 +6,25 @@
 
 a {
     text-decoration: none;
+    color: #fff;
 }
 
 li, ol {
     list-style: none;
+}
+
+/* HEADER */
+.header-wrap {
+    width: 100%;
+    height: 454px;
+    background-color: #4AA8D8;
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-family: "Gothic A1";
+    letter-spacing: -15px;
+    font-size: 90px;
+    padding-top: 20px;
 }
