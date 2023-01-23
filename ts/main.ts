@@ -28,7 +28,15 @@ function ContentFnc(obj: any): void {
       <div class="content-wrap">
         <p class=type>verb</p>
         <div class="content">
-          
+          <div class="slider-wrap">
+            
+          </div>
+          <div class="prev">
+            <i class="fa fa-chevron-left fa-4x" aria-hidden="true"></i>
+          </div>
+          <div class="next">
+            <i class="fa fa-chevron-right fa-4x" aria-hidden="true"></i>
+          </div>
         </div>
       <div>
     </div>

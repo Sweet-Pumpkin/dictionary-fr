@@ -28,7 +28,7 @@ li, ol {
     justify-content: center;
 }
 
-.title {
+.contents .title {
     height: 100px;
     font-family: 'Gothic A1';
     letter-spacing: -15px;
@@ -36,12 +36,12 @@ li, ol {
     padding-top: 20px;
 }
 
-.content-wrap {
+.contents .content-wrap {
     position: absolute;
     top: 130px;
 }
 
-.type {
+.contents .content-wrap .type {
     text-align: center;
     font-size: 40px;
     color: #fff;
@@ -49,8 +49,42 @@ li, ol {
     font-weight: 900;
 }
 
-.content {
+.contents .content-wrap .content {
+    position: relative;
     width: 700px;
     height: 500px;
     background-color: #fff;
+}
+
+.contents .content-wrap .content .slider-wrap {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border: solid 1px red;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contents .content-wrap .content .prev {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.contents .content-wrap .content .prev i {
+    color: #4AA8D8;
+}
+
+.contents .content-wrap .content .next {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.contents .content-wrap .content .next i {
+    color: #4AA8D8;
 }
