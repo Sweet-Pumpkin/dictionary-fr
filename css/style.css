@@ -1,4 +1,6 @@
-/* Reset */
+/**
+  * Reset 
+*/
 * {
     margin: 0px;
     padding: 0px;
@@ -18,7 +20,9 @@ li, ol {
     list-style: none;
 }
 
-/* HEADER */
+/**
+  * HEADER 
+*/
 .contents {
     position: relative;
     width: 100%;
@@ -63,8 +67,21 @@ li, ol {
     border: solid 1px red;
     left: 50%;
     transform: translateX(-50%);
+    overflow: hidden;
 }
 
+.contents .content-wrap .content .slider-wrap > ul {
+  display: flex;
+  transition: 0.3s;
+}
+
+.contents .content-wrap .content .slider-wrap > ul > li {
+  width: 500px;
+}
+
+/**
+  * button  
+*/
 .contents .content-wrap .content .prev {
     position: absolute;
     left: 20px;
