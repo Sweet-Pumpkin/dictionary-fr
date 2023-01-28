@@ -79,7 +79,7 @@ li, ol {
 
 
 .contents .content-wrap .content .slider-wrap > ul > li {
-  margin-top: 35px;
+  margin-top: 60px;
   width: 500px;
 }
 
@@ -100,6 +100,7 @@ li, ol {
   display: flex;
   font-size: 32px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 

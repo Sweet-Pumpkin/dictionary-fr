@@ -12,7 +12,7 @@ let template = `
     <a href="#">ㄷㅇㅈ</a>
   </h1>
   <div class="content-wrap">
-    <p class=type>verb</p>
+    <p class=type>verbs</p>
     <div class="content">
       <div class="slider-wrap">
         <ul id="slider">

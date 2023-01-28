@@ -13,6 +13,62 @@
             "meaning": ["보다", "~에 신경을 쓰다", "자기 모습을 보다"],
             "transform": ["Je regarde", "Tu regardes", "Il regarde", "Nous regardons", "Vous regardez", "Ils regardent"],
             "imperative": ["regardes", "regardons", "regarez"]
+        },
+        {
+            "verb": "écouter",
+            "verb_num": 1,
+            "meaning": ["듣다", "목소리를 듣다", "생각에 따르다"],
+            "transform": ["Je écoute", "Tu écoutes", "Il écoute", "Nous écoutons", "Vous écoutez", "Ils écoutent"],
+            "imperative": ["écoutes", "écoutons", "écoutez"]
+        },
+        {
+            "verb": "marcher",
+            "verb_num": 1,
+            "meaning": ["걷다", "트래블링", "걷기"],
+            "transform": ["Je marche", "Tu marches", "Il marche", "Nous marchons", "Vous marchez", "Ils marchent"],
+            "imperative": ["marches", "marchons", "marchez"]
+        },
+        {
+            "verb": "manger",
+            "verb_num": 1,
+            "meaning": ["먹다", "식사하다", "먹어지다"],
+            "transform": ["Je mange", "Tu manges", "Il mange", "Nous mangeons", "Vous mangez", "Ils mangent"],
+            "imperative": ["manges", "mangeons", "mangez"]
+        },
+        {
+            "verb": "travailler",
+            "verb_num": 1,
+            "meaning": ["일하다", "공부하다", "~하려고 애쓰다"],
+            "transform": ["Je travaille", "Tu travailles", "Il travaille", "Nous travaillons", "Vous travaillez", "Ils travaillent"],
+            "imperative": ["travailles", "travaillons", "travaillez"]
+        },
+        {
+            "verb": "donner",
+            "verb_num": 1,
+            "meaning": ["주다", "향하다", "헌신하다"],
+            "transform": ["Je donne", "Tu donnes", "Il donne", "Nous donnons", "Vous donnez", "Ils donnent"],
+            "imperative": ["donnes", "donnons", "donnez"]
+        },
+        {
+            "verb": "étudier",
+            "verb_num": 1,
+            "meaning": ["공부하다", "연습하다", "연구하다"],
+            "transform": ["Je étudie", "Tu étudies", "Il étudie", "Nous étudions", "Vous étudiez", "Ils étudient"],
+            "imperative": ["étudies", "étudions", "étudiez"]
+        },
+        {
+            "verb": "chanter",
+            "verb_num": 1,
+            "meaning": ["노래하다", "부르다", "~의 마음에 들다"],
+            "transform": ["Je chante", "Tu chantes", "Il chante", "Nous chantons", "Vous chantez", "Ils chantent"],
+            "imperative": ["chantes", "chantons", "chantez"]
+        },
+        {
+            "verb": "utiliser",
+            "verb_num": 1,
+            "meaning": ["사용하다", "이용하다", "활용하다"],
+            "transform": ["Je utilise", "Tu utilises", "Il utilise", "Nous utilisons", "Vous utilisez", "Ils utilisent"],
+            "imperative": ["utilises", "utilisons", "utilisez"]
         }
     ]
 }
