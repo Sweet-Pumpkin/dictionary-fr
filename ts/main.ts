@@ -54,13 +54,24 @@ function ContentFnc(obj: any): void {
       <li>
         <div class="stars">
           ${obj.verbs[i].verb_num == 3 ? 
-            '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>' :
+            '<i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i>' :
             obj.verbs[i].verb_num == 2 ? 
-            '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>' :
-            '<i class="fa fa-star" aria-hidden="true"></i>'
+            '<i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i>' :
+            '<i class="fa fa-star fa-2x" aria-hidden="true"></i>'
           }   
         </div>
-        <h1>${getData(obj.verbs[i].verb)}<h1>
+        <h1 class="verb">${getData(obj.verbs[i].verb)}<h1>
+        <div class="meaning">
+          ${obj.verbs[i].meaning.map((v: string, idx: number) => `<h4>${idx + 1}. ${v}</h4>`).join(' ')}
+        </div>
+        <h3 class="conjugasion">conjugasion</h3>
+        <div class="transform">
+          ${obj.verbs[i].transform.map((v: string) => `<h4>${v}</h4>`).join(' ')}
+        </div>
+        <h3 class="imperatif">impératif</h3>
+        <div class="imperative">
+          ${obj.verbs[i].imperative.map((v: string) => `<h4>${v}</h4>`).join(' ')}
+        </div>
       </li>
     `);
   }

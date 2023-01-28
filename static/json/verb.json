@@ -3,14 +3,16 @@
         {
             "verb": "parler",
             "verb_num": 1,
-            "meaing": ["말하다", "~에게 말하다", "논하다"],
-            "transform": ["Je parle", "Tu parles", "Il parle", "Nous parlons", "Vous parlez", "Ils parlent"]
+            "meaning": ["말하다", "~에게 말하다", "논하다"],
+            "transform": ["Je parle", "Tu parles", "Il parle", "Nous parlons", "Vous parlez", "Ils parlent"],
+            "imperative": ["parles", "parlons", "parlez"]
         },
         {
             "verb": "regarder",
             "verb_num": 1,
-            "meaing": ["보다", "~에 신경을 쓰다", "자기 모습을 보다"],
-            "transform": ["Je regarde", "Tu regardes", "Il regarde", "Nous regardons", "Vous regardez", "Ils regardent"]
+            "meaning": ["보다", "~에 신경을 쓰다", "자기 모습을 보다"],
+            "transform": ["Je regarde", "Tu regardes", "Il regarde", "Nous regardons", "Vous regardez", "Ils regardent"],
+            "imperative": ["regardes", "regardons", "regarez"]
         }
     ]
 }

@@ -2,106 +2,186 @@
   * Reset 
 */
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
     
 }
 
 body {
-    background-color: #EDEDED;
+  background-color: #EDEDED;
 }
 
 a {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 
 li, ol {
-    list-style: none;
+  list-style: none;
 }
 
 /**
   * HEADER 
 */
 .contents {
-    position: relative;
-    width: 100%;
-    height: 350px;
-    background-color: #4AA8D8;
-    display: flex;
-    justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background-color: #4AA8D8;
+  display: flex;
+  justify-content: center;
 }
 
 .contents .title {
-    height: 100px;
-    font-family: 'Gothic A1';
-    letter-spacing: -15px;
-    font-size: 90px;
-    padding-top: 20px;
+  height: 100px;
+  font-family: 'Gothic A1';
+  letter-spacing: -15px;
+  font-size: 90px;
+  padding-top: 20px;
 }
 
 .contents .content-wrap {
-    position: absolute;
-    top: 130px;
+  position: absolute;
+  top: 130px;
 }
 
 .contents .content-wrap .type {
-    text-align: center;
-    font-size: 40px;
-    color: #fff;
-    font-family: 'Explora', cursive;
-    font-weight: 900;
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+  font-family: 'Explora', cursive;
+  font-weight: 900;
 }
 
 .contents .content-wrap .content {
-    position: relative;
-    width: 700px;
-    height: 500px;
-    background-color: #fff;
+  position: relative;
+  width: 700px;
+  height: 500px;
+  background-color: #fff;
 }
 
 .contents .content-wrap .content .slider-wrap {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    border: solid 1px red;
-    left: 50%;
-    transform: translateX(-50%);
-    overflow: hidden;
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
 }
 
+/**
+  * Slider
+*/
 .contents .content-wrap .content .slider-wrap > ul {
   display: flex;
   transition: 0.3s;
 }
 
+
 .contents .content-wrap .content .slider-wrap > ul > li {
+  margin-top: 35px;
   width: 500px;
+}
+
+.contents .content-wrap .content .slider-wrap > ul > li .stars {
+  color: #4AA8D8;
+  display: flex;
+  justify-content: center;
+}
+
+.contents .content-wrap .content .slider-wrap > ul > li .verb {
+  font-size: 54px;
+  display: flex;
+  justify-content: center;
+}
+
+.contents .content-wrap .content .slider-wrap > ul > li .meaning {
+  margin-top: 10px;
+  display: flex;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.contents .content-wrap .content .slider-wrap > ul > li .meaning > h4 {
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.contents .content-wrap .content .slider-wrap > ul > li .conjugasion {
+  margin-top: 10px;
+  font-family: 'Explora', cursive;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.contents .content-wrap .content .slider-wrap > ul > li .transform {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contents .content-wrap .content .slider-wrap > ul > li .transform > h4 {
+  margin-right: 20px;
+  font-size: 24px;
+  color: #828282;
+}
+
+.contents .content-wrap .content .slider-wrap > ul > li .transform > h4:last-child {
+  margin-right: 0px;
+}
+
+
+.contents .content-wrap .content .slider-wrap > ul > li .imperatif {
+  margin-top: 10px;
+  font-family: 'Explora', cursive;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.contents .content-wrap .content .slider-wrap > ul > li .imperative {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contents .content-wrap .content .slider-wrap > ul > li .imperative > h4 {
+  font-size: 24px;
+  color: #828282;
+  margin-right: 20px;
+}
+
+.contents .content-wrap .content .slider-wrap > ul > li .imperative > h4:last-child {
+  margin-right: 0px;
 }
 
 /**
   * button  
 */
 .contents .content-wrap .content .prev {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .contents .content-wrap .content .prev i {
-    color: #4AA8D8;
+  color: #4AA8D8;
 }
 
 .contents .content-wrap .content .next {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .contents .content-wrap .content .next i {
-    color: #4AA8D8;
+  color: #4AA8D8;
 }
