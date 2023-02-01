@@ -13,16 +13,6 @@ let counter: number = 1;
 // 슬라이드 이동 값
 let TRANSLATE_X: number = 0;
 
-// JSON
-fetch('./json/verb.json')
-  .then(res => {
-    return res.json();
-  })
-  .then(obj => {
-    WIDTH = obj.verbs.length;
-    ContentFnc(obj);
-  });
-
 function getData(v: string | number): string | number {
   let res = JSON.stringify(v);
   return res.replace(/\"/gi, "");
@@ -44,10 +34,10 @@ function ContentFnc(obj: any): void {
             {{__li__}}
           </ul>
         </div>
-        <button class="prev" onclick="${() => prevSlider()}">
+        <button class="prev">
           <i class="fa fa-chevron-left fa-4x" aria-hidden="true"></i>
         </button>
-        <button class="next" onclick="${() => nextSlider()}">
+        <button class="next">
           <i class="fa fa-chevron-right fa-4x" aria-hidden="true"></i>
         </button>
       </div>
@@ -90,16 +80,27 @@ function ContentFnc(obj: any): void {
   }
 }
 
-function nextSlider(): void {
-  if (counter < WIDTH) {
-    counter += 1;
-    TRANSLATE_X = -500 * (counter - 1);
-  }
-}
-
 function prevSlider(): void {
   if (counter > 1) {
     counter -= 1;
     TRANSLATE_X = -500 * (counter - 1);
   }
 }
+
+function nextSlider(): void {
+  console.log('작동?');
+  if (counter < WIDTH) {
+    counter += 1;
+    TRANSLATE_X = -500 * (counter - 1);
+  }
+}
+
+// JSON
+fetch('./json/verb.json')
+  .then(res => {
+    return res.json();
+  })
+  .then(obj => {
+    WIDTH = obj.verbs.length;
+    ContentFnc(obj);
+  });
