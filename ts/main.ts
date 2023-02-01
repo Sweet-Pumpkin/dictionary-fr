@@ -2,33 +2,16 @@
 // css
 import '../css/style.css';
 
-// 선언
+/**  
+ * 선언
+*/
 const root: HTMLElement | null = document.getElementById('root');
-
-// template
-let template = `
-<div class="contents">
-  <h1 class="title">
-    <a href="#">ㄷㅇㅈ</a>
-  </h1>
-  <div class="content-wrap">
-    <p class=type>verbs</p>
-    <div class="content">
-      <div class="slider-wrap">
-        <ul id="slider">
-          {{__li__}}
-        </ul>
-      </div>
-      <div class="prev">
-        <i class="fa fa-chevron-left fa-4x" aria-hidden="true"></i>
-      </div>
-      <div class="next">
-        <i class="fa fa-chevron-right fa-4x" aria-hidden="true"></i>
-      </div>
-    </div>
-  <div>
-</div>
-`
+// 가로 값
+let WIDTH: number = 0;
+// 슬라이드 카운트
+let counter: number = 1;
+// 슬라이드 이동 값
+let TRANSLATE_X: number = 0;
 
 // JSON
 fetch('./json/verb.json')
@@ -36,8 +19,8 @@ fetch('./json/verb.json')
     return res.json();
   })
   .then(obj => {
+    WIDTH = obj.verbs.length;
     ContentFnc(obj);
-    sliderFnc(obj);
   });
 
 function getData(v: string | number): string | number {
@@ -45,9 +28,34 @@ function getData(v: string | number): string | number {
   return res.replace(/\"/gi, "");
 }
 
-function ContentFnc(obj: any): void {
 
-  let liEls = [];
+function ContentFnc(obj: any): void {
+  // template
+  let template = `
+  <div class="contents">
+    <div class="title">
+      <a href="#">ㄷㅇㅈ</a>
+    </div>
+    <div class="content-wrap">
+      <p class=type>verbs</p>
+      <div class="content">
+        <div class="slider-wrap">
+          <ul id="slider" style="width: ${500 * WIDTH}px; transform: translateX(${TRANSLATE_X}px)">
+            {{__li__}}
+          </ul>
+        </div>
+        <button class="prev" onclick="${() => prevSlider()}">
+          <i class="fa fa-chevron-left fa-4x" aria-hidden="true"></i>
+        </button>
+        <button class="next" onclick="${() => nextSlider()}">
+          <i class="fa fa-chevron-right fa-4x" aria-hidden="true"></i>
+        </button>
+      </div>
+    <div>
+  </div>
+  `
+
+  let liEls: string[] = [];
 
   for (let i = 0; i < obj.verbs.length; i++) {
     liEls.push(`
@@ -66,11 +74,7 @@ function ContentFnc(obj: any): void {
         </div>
         <h3 class="conjugasion">conjugasion</h3>
         <div class="transform">
-          ${obj.verbs[i].transform.map((v: string) => `<h4>${v}</h4>`).join(' ')}
-        </div>
-        <h3 class="imperatif">impératif</h3>
-        <div class="imperative">
-          ${obj.verbs[i].imperative.map((v: string) => `<h4>${v}</h4>`).join(' ')}
+          ${obj.verbs[i].transform.map((v: string) => `<h4>${v},</h4>`).join(' ')}
         </div>
       </li>
     `);
@@ -84,39 +88,18 @@ function ContentFnc(obj: any): void {
   } else {
     console.error('최상위 컨테이너가 없어 UI를 진행하지 못합니다.');
   }
-
 }
 
-function sliderFnc(obj: any): void {
-  // 선언
-  const WIDTH: number = obj.verbs.length;
-  const ulEl: HTMLElement | null = document.getElementById('slider');
-  const prevBtn: HTMLElement | null = document.querySelector('.prev');
-  const nextBtn: HTMLElement | null = document.querySelector('.next');
-
-  let counter: number = 1;
-
-  if (ulEl) {
-    ulEl.style.width = `${WIDTH * 500}px`
-    prevBtn?.addEventListener('click', () => {prevSlider()});
-    nextBtn?.addEventListener('click', () => {nextSlider()});
+function nextSlider(): void {
+  if (counter < WIDTH) {
+    counter += 1;
+    TRANSLATE_X = -500 * (counter - 1);
   }
+}
 
-  function nextSlider(): void {
-    if (counter < WIDTH) {
-      counter += 1;
-      if (ulEl) {
-        ulEl.style.transform = `translateX(${-500 * (counter - 1)}px)`;
-      }
-    }
-  }
-
-  function prevSlider(): void {
-    if (counter > 1) {
-      counter -= 1;
-      if (ulEl) {
-        ulEl.style.transform = `translateX(${-500 * (counter - 1)}px)`;
-      }
-    }
+function prevSlider(): void {
+  if (counter > 1) {
+    counter -= 1;
+    TRANSLATE_X = -500 * (counter - 1);
   }
 }

@@ -20,6 +20,11 @@ li, ol {
   list-style: none;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+}
+
 /**
   * HEADER 
 */
@@ -34,10 +39,15 @@ li, ol {
 
 .contents .title {
   height: 100px;
-  font-family: 'Gothic A1';
-  letter-spacing: -15px;
+  font-family: 'Noto Sans KR', sans-serif;
+  letter-spacing: -23px;
   font-size: 90px;
+  font-weight: 900;
   padding-top: 20px;
+}
+
+.contents .title > a {
+  margin-right: 20px;
 }
 
 .contents .content-wrap {
@@ -47,17 +57,20 @@ li, ol {
 
 .contents .content-wrap .type {
   text-align: center;
-  font-size: 40px;
+  font-size: 18px;
   color: #fff;
-  font-family: 'Explora', cursive;
-  font-weight: 900;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-style: italic;
+  font-weight: 100;
+  margin-top: 20px;
 }
 
 .contents .content-wrap .content {
   position: relative;
   width: 700px;
-  height: 500px;
+  height: 400px;
   background-color: #fff;
+  margin-top: 10px;
 }
 
 .contents .content-wrap .content .slider-wrap {
@@ -79,8 +92,8 @@ li, ol {
 
 
 .contents .content-wrap .content .slider-wrap > ul > li {
-  margin-top: 60px;
   width: 500px;
+  margin-top: 50px;
 }
 
 .contents .content-wrap .content .slider-wrap > ul > li .stars {
@@ -93,6 +106,7 @@ li, ol {
   font-size: 54px;
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .contents .content-wrap .content .slider-wrap > ul > li .meaning {
@@ -110,9 +124,11 @@ li, ol {
 }
 
 .contents .content-wrap .content .slider-wrap > ul > li .conjugasion {
-  margin-top: 10px;
-  font-family: 'Explora', cursive;
-  font-size: 32px;
+  margin-top: 25px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+  font-style: italic;
   display: flex;
   justify-content: center;
 }
@@ -131,32 +147,6 @@ li, ol {
 }
 
 .contents .content-wrap .content .slider-wrap > ul > li .transform > h4:last-child {
-  margin-right: 0px;
-}
-
-
-.contents .content-wrap .content .slider-wrap > ul > li .imperatif {
-  margin-top: 10px;
-  font-family: 'Explora', cursive;
-  font-size: 32px;
-  display: flex;
-  justify-content: center;
-}
-
-.contents .content-wrap .content .slider-wrap > ul > li .imperative {
-  margin-top: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.contents .content-wrap .content .slider-wrap > ul > li .imperative > h4 {
-  font-size: 24px;
-  color: #828282;
-  margin-right: 20px;
-}
-
-.contents .content-wrap .content .slider-wrap > ul > li .imperative > h4:last-child {
   margin-right: 0px;
 }
 
