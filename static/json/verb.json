@@ -59,6 +59,90 @@
             "verb_num": 1,
             "meaning": ["사용하다", "이용하다", "활용하다"],
             "transform": ["Je utilise", "Tu utilises", "Il utilise", "Nous utilisons", "Vous utilisez", "Ils utilisent"]
+        },
+        {
+            "verb": "appeler",
+            "verb_num": 1,
+            "meaning": ["부르다", "불리다", "~을 따르지 않다"],
+            "transform": ["Je m'applle'", "Tu t'appelles", "Il s'appelle", "Nous nous appellons", "Vous vous appelez", "Ils s'appellent"]
+        },
+        {
+            "verb": "être",
+            "verb_num": 3,
+            "meaning": ["있다", "존재하다", "~이다"],
+            "transform": ["Je suis", "Tu es", "Il est", "Nous sommes", "Vous êtes", "Ils sont"]
+        },
+        {
+            "verb": "avoir",
+            "verb_num": 3,
+            "meaning": ["소유하다", "보유하다", "가지다"],
+            "transform": ["J'ai", "Tu as", "Il a", "Nous avons", "Vous avez", "Ils ont"]
+        },
+        {
+            "verb": "habiter",
+            "verb_num": 1,
+            "meaning": ["살다", "서식하다", "자리잡다"],
+            "transform": ["J'habite", "Tu habites", "Il habite", "Nous habitons", "Vous habitez", "Ils habitent"]
+        },
+        {
+            "verb": "acheter",
+            "verb_num": 1,
+            "meaning": ["사다", "살 수 있다", "사주다"],
+            "transform": ["j'achète", "Tu achètes", "Il achète", "Nous achetons", "Vous achetez", "Ils achètent"]
+        },
+        {
+            "verb": "payer",
+            "verb_num": 1,
+            "meaning": ["지불하다", "돈을 치르다", "값이 치러지다"],
+            "transform": ["Je paie/paye", "Tu paies/payes", "Il paie/paye", "Nous payons", "Vous payez", "Ils paient/payent"]
+        },
+        {
+            "verb": "aller",
+            "verb_num": 3,
+            "meaning": ["가다", "떠나다", "가기"],
+            "transform": ["Je vais", "Tu as", "Il a", "Nous allons", "Vous allez", "Ils vont"]
+        },
+        {
+            "verb": "monter",
+            "verb_num": 1,
+            "meaning": ["오르다", "올라타다", "타다"],
+            "transform": ["Je monte", "Tu montes", "Il monte", "Nous montons", "Vous montez", "Ils montent"]
+        },
+        {
+            "verb": "vendre",
+            "verb_num": 3,
+            "meaning": ["팔다", "팔리다", "몸을 팔다"],
+            "transform": ["Je vends", "Tu vends", "Il vend", "Nous vendons", "Vous vendez", "Ils vendent"]
+        },
+        {
+            "verb": "mettre",
+            "verb_num": 3,
+            "meaning": ["놓다", "몸을 두다", "서다"],
+            "transform": ["Je mets", "Tu mets", "Il met", "Nous mettons", "Vous mettez", "Ils mettent"]
+        },
+        {
+            "verb": "venir",
+            "verb_num": 3,
+            "meaning": ["오다", "돌아오기", "오기"],
+            "transform": ["Je viens", "Tu viens", "Il vient", "Nous venons", "Vous venez", "Ils viennent"]
+        },
+        {
+            "verb": "pouvoir",
+            "verb_num": 3,
+            "meaning": ["할 수 있다", "~일 수 있다", "해도 좋다"],
+            "transform": ["Je peux", "Tu peux", "Il peut", "Nous pouvons", "Vous pouvez", "Ils peuvent"]
+        },
+        {
+            "verb": "Vouloir",
+            "verb_num": 1,
+            "meaning": ["바라다", "~을 받아들이다", "~하기를 바라다"],
+            "transform": ["Je veux", "Tu veux", "Il veut", "Nous voulons", "Vous voulez", "Ils veulent"]
+        },
+        {
+            "verb": "habiter",
+            "verb_num": 1,
+            "meaning": ["살다", "서식하다", "자리잡다"],
+            "transform": ["J'habite", "Tu habites", "Il habite", "Nous habitons", "Vous habitez", "Ils habitent"]
         }
     ]
 }

@@ -62,7 +62,7 @@ function ContentFnc(obj: any): void {
         </div>
         <h3 class="conjugasion">conjugasion</h3>
         <div class="transform">
-          ${obj.verbs[i].transform.map((v: string) => `<h4>${v},</h4>`).join(' ')}
+          ${obj.verbs[i].transform.map((v: string, idx: number) => idx != 5 ? `<h4>${v},</h4>` : `<h4>${v}</h4>`).join(' ')}
         </div>
       </li>
     `);
@@ -92,20 +92,13 @@ function SliderFnc(): void {
     }
   });
   nextBtn?.addEventListener('click', () => {
-    if (counter < WIDTH) {
+    if (counter < WIDTH - 1) {
       counter += 1;
       if (ulEls) {
         ulEls.style.transform = `translateX(${-500 * counter}px)`;
       }
     }
   });
-}
-
-function prevSlider(): any {
-}
-
-function nextSlider(): any {
-
 }
 
 // JSON
