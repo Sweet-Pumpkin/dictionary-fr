@@ -9,9 +9,7 @@ const root: HTMLElement | null = document.getElementById('root');
 // 가로 값
 let WIDTH: number = 0;
 // 슬라이드 카운트
-let counter: number = 1;
-// 슬라이드 이동 값
-let TRANSLATE_X: number = 0;
+let counter: number = 0;
 
 function getData(v: string | number): string | number {
   let res = JSON.stringify(v);
@@ -30,7 +28,7 @@ function ContentFnc(obj: any): void {
       <p class=type>verbs</p>
       <div class="content">
         <div class="slider-wrap">
-          <ul id="slider" style="width: ${500 * WIDTH}px; transform: translateX(${TRANSLATE_X}px)">
+          <ul id="slider" style="width: ${500 * WIDTH}px">
             {{__li__}}
           </ul>
         </div>
@@ -80,19 +78,34 @@ function ContentFnc(obj: any): void {
   }
 }
 
-function prevSlider(): void {
-  if (counter > 1) {
-    counter -= 1;
-    TRANSLATE_X = -500 * (counter - 1);
-  }
+function SliderFnc(): void {
+  const ulEls: HTMLElement | null = document.getElementById('slider');
+  const prevBtn: HTMLElement | null = document.querySelector('.prev');
+  const nextBtn: HTMLElement | null = document.querySelector('.next');
+
+  prevBtn?.addEventListener('click', () => {
+    if (counter > 0) {
+      counter -= 1;
+      if(ulEls) {
+        ulEls.style.transform = `translateX(${-500 * counter}px)`;
+      }
+    }
+  });
+  nextBtn?.addEventListener('click', () => {
+    if (counter < WIDTH) {
+      counter += 1;
+      if (ulEls) {
+        ulEls.style.transform = `translateX(${-500 * counter}px)`;
+      }
+    }
+  });
 }
 
-function nextSlider(): void {
-  console.log('작동?');
-  if (counter < WIDTH) {
-    counter += 1;
-    TRANSLATE_X = -500 * (counter - 1);
-  }
+function prevSlider(): any {
+}
+
+function nextSlider(): any {
+
 }
 
 // JSON
@@ -103,4 +116,5 @@ fetch('./json/verb.json')
   .then(obj => {
     WIDTH = obj.verbs.length;
     ContentFnc(obj);
+    SliderFnc();
   });
